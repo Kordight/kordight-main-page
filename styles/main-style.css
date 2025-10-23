@@ -41,6 +41,31 @@ body {
     margin: 1rem 10%;
 }
 
+.footer-note {
+    font-family: 'Google Sans Code', monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #aaaaaa;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.wip-link-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.wip-link-tile:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+.wip-link-tile{
+    transition: transform 0.2s;
+}
+
 .wip-link-tile img {
     width: 64px;
     height: 64px;

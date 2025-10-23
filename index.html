@@ -4,35 +4,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/main-style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-  <title>Kordight</title>
+  <title>Kordight | Game & Software Development + 3D Tools</title>
+  <meta name="description"
+    content="Kordight — indie developer creating games, 3D assets, and tools using Unreal Engine, Blender, and C++.">
+  <meta name="keywords" content="Kordight, game developer, Unreal Engine, Blender, C++, 3D assets, tools, portfolio">
+  <meta property="og:title" content="Kordight | Game Development & 3D Tools">
+  <meta property="og:description" content="Indie dev crafting interactive worlds and tools for creators.">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Google+Sans+Code:wght@400;700&display=swap"
     rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main-style.css">
 </head>
 
 <body>
-  <div class="wip-center-box">
-<h1 class="wip-title">Work In Progress<span class="cursor"></span></h1>
-    <p class="wip-text">
-      This site is currently under <span class="vscode-pink">&lt;development&gt;</span>. Please check back later for
-      updates!
-    </p>
-    <div class="promo-links">
+  <main class="wip-center-box">
+    <header>
+      <h1 class="wip-title">Work In Progress<span class="cursor"></span></h1>
+      <p class="wip-text">
+        This site is currently under <span class="vscode-pink">&lt;development&gt;</span>.
+        Check back soon for updates and new projects.
+      </p>
+    </header>
+
+    <section class="promo-links">
       <h2 class="wip-subtitle">Follow me on socials</h2>
       <div class="wip-link-icons">
         <div class="wip-link-tile">
-          <a href="https://github.com/Kordight" target="_blank">
-            <img src="img/logos/github-mark-white.svg" alt="GitHub" class="wip-icon">
+          <a href="https://github.com/Kordight" target="_blank" rel="noopener noreferrer">
+            <img src="img/logos/github-mark-white.svg" alt="GitHub logo" class="wip-icon">
             <p>GitHub</p>
           </a>
         </div>
+        <div class="wip-link-tile">
+          <a href="https://www.fab.com/sellers/Kordight" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://static.fab.com/static/builds/web/dist/frontend/assets/images/common/logo/e1e12dc6142410b391ce48e416261ad7-v1.svg"
+              alt="Fab seller profile logo" class="wip-icon">
+            <p>Fab</p>
+          </a>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
+
+    <footer>
+      <p class="footer-note">© <span id="year"></span> Kordight. All rights reserved. Logos are trademarks of their
+        respective owners.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>
