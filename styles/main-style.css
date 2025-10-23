@@ -42,7 +42,7 @@ body {
 }
 
 .vscode-pink {
-    color: #d492cf;
+    color: #B96EBF;
     font-weight: bold;
     font-family: "Google Sans Code", monospace;
 }
@@ -65,4 +65,21 @@ body {
     color: #ffffff;
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.cursor {
+    margin-left: 1rem;
+}
+
+.cursor::after {
+    content: "▂";
+    font-weight: bold;
+    animation: blink 1s steps(1) infinite;
+    color: #B96EBF;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
