@@ -41,12 +41,6 @@ body {
     margin: 1rem 10%;
 }
 
-.vscode-pink {
-    color: #B96EBF;
-    font-weight: bold;
-    font-family: "Google Sans Code", monospace;
-}
-
 .wip-link-tile img {
     width: 64px;
     height: 64px;
@@ -75,11 +69,21 @@ body {
     content: "▂";
     font-weight: bold;
     animation: blink 1s steps(1) infinite;
-    color: #B96EBF;
+    color: var(--vscode-pink);
+}
+
+.vscode-pink {
+    color: var(--vscode-pink);
+    font-weight: bold;
+    font-family: "Google Sans Code", monospace;
 }
 
 @keyframes blink {
     50% {
         opacity: 0;
     }
+}
+
+:root {
+    --vscode-pink: #BE7ADC;
 }
