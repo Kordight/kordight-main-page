@@ -15,6 +15,7 @@
     --global-data-analysis-color: #FF6F61;
     --global-cpp-color: #F34B7D;
     --global-ue-color: #242323;
+    --global-plugin-color: #6E5494;
 }
 
 /* =======================
@@ -259,7 +260,8 @@ body {
 .project-tag-python,
 .project-tag-data-analysis,
 .project-tag-cpp,
-.project-tag-ue {
+.project-tag-ue,
+.project-tag-plugin {
     display: inline-block;
     color: #ffffff;
     padding: 4px 8px;
@@ -285,6 +287,10 @@ body {
 
 .project-tag-ue {
     background-color: var(--global-ue-color);
+}
+
+.project-tag-plugin {
+    background-color: var(--global-plugin-color);
 }
 
 
