@@ -3,19 +3,25 @@
 ======================= */
 :root {
     --vscode-pink: #BE7ADC;
+    --vscode-yellow: #F9E79F;
+    --vscode-blue: #85C1E9;
     --global-border-radius: 15px;
     --global-window-bg: #2a2e38;
     --global-title-color: #dddddd;
     --global-subtitle-color: #aaaaaa;
     --global-text-color: #cccccc;
     --global-border-color: #4a5563;
+    --global-python-color: #3572A5;
+    --global-data-analysis-color: #FF6F61;
+    --global-cpp-color: #F34B7D;
+    --global-ue-color: #242323;
 }
 
 /* =======================
    Reset & Body
 ======================= */
 body {
-    background: linear-gradient(to left, #272c36, #272e38);
+    background: linear-gradient(to left, #14191f, #1c2129);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -42,7 +48,8 @@ body {
 .header-content,
 .projects,
 .links,
-.contact {
+.contact,
+.fab-products {
     position: relative;
     border: 1px solid var(--global-border-color);
     background-color: var(--global-window-bg);
@@ -53,7 +60,8 @@ body {
 .header-content::before,
 .projects::before,
 .links::before,
-.contact::before {
+.contact::before,
+.fab-products::before {
     content: "";
     position: absolute;
     top: 0;
@@ -126,6 +134,24 @@ body {
     gap: 1rem;
 }
 
+.big-window-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box;
+    gap: 1rem;
+    align-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.section-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .small-window-section .links {
     width: 100%;
 }
@@ -179,6 +205,18 @@ body {
     margin-bottom: 1rem;
 }
 
+.section-link {
+    font-family: 'Google Sans Code', monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--vscode-yellow);
+    text-decoration: none;
+    padding-top: 1rem;
+}
+
+.section-link:hover {
+    text-decoration: underline;
+}
 
 /* =======================
    Projects
@@ -204,6 +242,51 @@ body {
 .project-item {
     box-shadow: 0 4px 10px -10px #636363;
 }
+
+.project-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-item a:hover .project-title {
+    text-decoration: underline;
+}
+
+.project-tags {
+    margin-bottom: 10px;
+}
+
+.project-tag-python,
+.project-tag-data-analysis,
+.project-tag-cpp,
+.project-tag-ue {
+    display: inline-block;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-family: Arimo, sans-serif;
+    font-weight: 600;
+}
+
+.project-tag-python {
+    background-color: var(--global-python-color);
+}
+
+.project-tag-data-analysis {
+    background-color: var(--global-data-analysis-color);
+}
+
+.project-tag-cpp {
+    background-color: var(--global-cpp-color);
+}
+
+.project-tag-ue {
+    background-color: var(--global-ue-color);
+}
+
 
 /* =======================
    Responsive Design
