@@ -2,7 +2,29 @@
    Root Variables
 ======================= */
 :root {
+    /* IDE-inspired syntax colors (VS Code Dark+ theme) */
     --vscode-pink: #BE7ADC;
+    --vscode-blue: #569CD6;
+    --vscode-light-blue: #9CDCFE;
+    --vscode-green: #6A9955;
+    --vscode-light-green: #B5CEA8;
+    --vscode-orange: #CE9178;
+    --vscode-yellow: #DCDCAA;
+    --vscode-red: #F48771;
+    --vscode-purple: #C586C0;
+    
+    /* Semantic colors */
+    --color-success: #4EC9B0;
+    --color-warning: #D7BA7D;
+    --color-error: #F44747;
+    --color-info: #3794FF;
+    
+    /* Background colors */
+    --bg-primary: #1E1E1E;
+    --bg-secondary: #252526;
+    --bg-tertiary: #2D2D30;
+    
+    /* Global settings */
     --global-border-radius: 15px;
     --global-window-bg: #2a2e38;
     --global-title-color: #dddddd;
@@ -76,14 +98,14 @@ body {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
     font-size: 2rem;
-    color: var(--global-title-color);
+    color: var(--vscode-light-blue);
 }
 
 .title-minor {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    color: var(--global-title-color);
+    color: var(--vscode-yellow);
 }
 
 .subtitle,
@@ -107,7 +129,7 @@ body {
     font-family: 'Google Sans Code', monospace;
     font-weight: 400;
     font-size: 1rem;
-    color: #aaaaaa;
+    color: var(--vscode-green);
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -163,11 +185,13 @@ body {
     font-family: 'Google Sans Code', monospace;
     font-weight: 400;
     font-size: 1.1rem;
-    color: var(--global-text-color);
+    color: var(--vscode-light-blue);
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .social-text:hover {
+    color: var(--vscode-blue);
     text-decoration: underline;
 }
 
@@ -203,6 +227,12 @@ body {
 
 .project-item {
     box-shadow: 0 4px 10px -10px #636363;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px -5px var(--vscode-purple);
 }
 
 /* =======================
