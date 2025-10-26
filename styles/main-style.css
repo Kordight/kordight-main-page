@@ -157,7 +157,7 @@ body {
     width: 100%;
 }
 
-.profile-picture {
+.profile-picture-container {
     width: 30%;
     flex-shrink: 0;
 }
@@ -166,6 +166,45 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 1px solid var(--global-border-color);
+    width: 100%;
+}
+
+.profile-picture-container{
+    position: relative; /* needed so absolute children anchor to the picture */
+}
+
+.mobile-speech-bubble{
+    display:none;
+    position: absolute;
+    /* place at top-right corner of the profile picture with a small offset */
+    top: -8px;
+    right: -8px;
+    transform: translate(0, 0);
+    background-color: var(--global-window-bg);
+    color: var(--global-text-color);
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid var(--global-border-color);
+    font-family: 'Google Sans Code', monospace;
+    font-size: 1rem;
+    width: fit-content;
+    max-width: 220px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* triangular notch to make it look like a speech bubble */
+.mobile-speech-bubble::after{
+    content: "";
+    position: absolute;
+    /* notch will point down-left toward the profile image center */
+    bottom: -8px;
+    right: 14px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--global-window-bg);
+    filter: drop-shadow(0 1px 0 rgba(0,0,0,0.15));
 }
 
 .links {
@@ -313,5 +352,8 @@ body {
 
     .content {
         margin: 2rem auto 0;
+    }
+    .mobile-speech-bubble{
+        display:block;
     }
 }
