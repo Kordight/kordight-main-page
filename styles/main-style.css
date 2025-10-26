@@ -5,6 +5,8 @@
     --vscode-pink: #BE7ADC;
     --vscode-yellow: #F9E79F;
     --vscode-blue: #85C1E9;
+    --vscode-green: #4EC9B0;
+    --vscode-orange: #CE9178;
     --global-border-radius: 15px;
     --global-window-bg: #2a2e38;
     --global-title-color: #dddddd;
@@ -17,6 +19,11 @@
     --global-ue-color: #242323;
     --global-plugin-color: #6E5494;
     --global-environment-color: #4CAF50;
+    --window-control-size: 12px;
+    --titlebar-height: 35px;
+    --window-control-red: #ff5f56;
+    --window-control-yellow: #ffbd2e;
+    --window-control-green: #27c93f;
 }
 
 /* =======================
@@ -56,7 +63,9 @@ body {
     border: 1px solid var(--global-border-color);
     background-color: var(--global-window-bg);
     padding: 1rem;
+    padding-top: calc(var(--titlebar-height) + 1rem);
     border-radius: var(--global-border-radius);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .header-content::before,
@@ -69,7 +78,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 18px;
+    height: var(--titlebar-height);
     background: repeating-linear-gradient(45deg,
             var(--global-border-color),
             var(--global-border-color) 4px,
@@ -77,6 +86,31 @@ body {
             #07101400 8px);
     border-top-left-radius: var(--global-border-radius);
     border-top-right-radius: var(--global-border-radius);
+}
+
+/* Window Controls */
+.header-content::after,
+.projects::after,
+.links::after,
+.contact::after,
+.fab-products::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: calc(var(--window-control-size) * 3 + 16px);
+    height: var(--window-control-size);
+    background-image: 
+        radial-gradient(circle, var(--window-control-red) 0%, var(--window-control-red) 50%, transparent 50%),
+        radial-gradient(circle, var(--window-control-yellow) 0%, var(--window-control-yellow) 50%, transparent 50%),
+        radial-gradient(circle, var(--window-control-green) 0%, var(--window-control-green) 50%, transparent 50%);
+    background-size: var(--window-control-size) var(--window-control-size);
+    background-position: 
+        0 0,
+        calc(var(--window-control-size) + 8px) 0,
+        calc(var(--window-control-size) * 2 + 16px) 0;
+    background-repeat: no-repeat;
+    z-index: 10;
 }
 
 /* =======================
@@ -87,6 +121,16 @@ body {
     font-weight: 700;
     font-size: 2rem;
     color: var(--global-title-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.title::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: var(--vscode-pink);
+    font-size: 0.8rem;
 }
 
 .title-minor {
@@ -94,6 +138,21 @@ body {
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--global-title-color);
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+.title-minor::before {
+    content: attr(data-line);
+    position: absolute;
+    left: 0;
+    color: #666;
+    font-family: 'Google Sans Code', monospace;
+    font-size: 0.9rem;
+    font-weight: 400;
+    width: 2rem;
+    text-align: right;
+    padding-right: 0.5rem;
 }
 
 .subtitle,
@@ -120,6 +179,22 @@ body {
     color: #aaaaaa;
     text-align: center;
     margin-bottom: 1rem;
+    background-color: var(--global-window-bg);
+    border: 1px solid var(--global-border-color);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer-note::before {
+    content: "⚡ ";
+    color: var(--vscode-yellow);
+    margin-right: 0.5rem;
+}
+
+/* Footer as status bar */
+footer {
+    padding: 1rem 0;
 }
 
 /* =======================
@@ -152,6 +227,16 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--global-border-color);
+    margin-bottom: 1rem;
+}
+
+.section-header .title::before {
+    content: ">";
+    color: var(--vscode-blue);
+    margin-right: 0.5rem;
+    font-family: 'Google Sans Code', monospace;
 }
 
 .small-window-section .links {
@@ -168,6 +253,13 @@ body {
     object-fit: cover;
     border: 1px solid var(--global-border-color);
     width: 100%;
+    box-shadow: 0 0 20px rgba(190, 122, 220, 0.2);
+    transition: all 0.3s ease;
+}
+
+.profile-picture:hover {
+    box-shadow: 0 0 30px rgba(190, 122, 220, 0.4);
+    transform: scale(1.02);
 }
 
 .profile-picture-container {
@@ -218,6 +310,13 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.social-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .social-logo {
@@ -233,10 +332,21 @@ body {
     font-size: 1.1rem;
     color: var(--global-text-color);
     text-decoration: none;
+    position: relative;
+    padding-left: 0.3rem;
+}
+
+.social-text::before {
+    content: "├─";
+    position: absolute;
+    left: -1.5rem;
+    color: #666;
+    font-size: 0.9rem;
 }
 
 .social-text:hover {
     text-decoration: underline;
+    color: var(--vscode-blue);
 }
 
 .text-content-contact {
@@ -247,6 +357,22 @@ body {
     margin-bottom: 1rem;
 }
 
+.contact-method {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--global-border-color);
+    transition: all 0.2s ease;
+}
+
+.contact-method:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: var(--vscode-green);
+    box-shadow: 0 0 10px rgba(78, 201, 176, 0.1);
+}
+
 .section-link {
     font-family: 'Google Sans Code', monospace;
     font-weight: 400;
@@ -254,6 +380,19 @@ body {
     color: var(--vscode-yellow);
     text-decoration: none;
     padding-top: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.section-link::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    transition: transform 0.2s ease;
+}
+
+.section-link:hover::before {
+    transform: translateX(3px);
 }
 
 .section-link:hover {
@@ -283,6 +422,18 @@ body {
 
 .project-item {
     box-shadow: 0 4px 10px -10px #636363;
+    border: 1px solid transparent;
+    border-radius: var(--global-border-radius);
+    padding: 0.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    border-color: var(--vscode-blue);
+    box-shadow: 0 8px 20px rgba(133, 193, 233, 0.15);
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, rgba(133, 193, 233, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .project-item a {
@@ -313,6 +464,18 @@ body {
     margin-top: 5px;
     font-family: Arimo, sans-serif;
     font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.project-tag-python:hover,
+.project-tag-data-analysis:hover,
+.project-tag-cpp:hover,
+.project-tag-ue:hover,
+.project-tag-plugin:hover,
+.project-tag-environment:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .project-tag-python {
