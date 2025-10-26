@@ -21,6 +21,9 @@
     --global-environment-color: #4CAF50;
     --window-control-size: 12px;
     --titlebar-height: 35px;
+    --window-control-red: #ff5f56;
+    --window-control-yellow: #ffbd2e;
+    --window-control-green: #27c93f;
 }
 
 /* =======================
@@ -98,9 +101,9 @@ body {
     width: calc(var(--window-control-size) * 3 + 16px);
     height: var(--window-control-size);
     background-image: 
-        radial-gradient(circle, #ff5f56 0%, #ff5f56 50%, transparent 50%),
-        radial-gradient(circle, #ffbd2e 0%, #ffbd2e 50%, transparent 50%),
-        radial-gradient(circle, #27c93f 0%, #27c93f 50%, transparent 50%);
+        radial-gradient(circle, var(--window-control-red) 0%, var(--window-control-red) 50%, transparent 50%),
+        radial-gradient(circle, var(--window-control-yellow) 0%, var(--window-control-yellow) 50%, transparent 50%),
+        radial-gradient(circle, var(--window-control-green) 0%, var(--window-control-green) 50%, transparent 50%);
     background-size: var(--window-control-size) var(--window-control-size);
     background-position: 
         0 0,
