@@ -1,44 +1,10 @@
 body {
-    background: linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to left, #272c36, #1f242c);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
     max-width: 100%;
-}
-
-.wip-center-box {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10%;
-    padding-bottom: 1%;
-}
-
-.promo-links {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: 1rem;
-}
-
-.wip-title {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 4rem;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.wip-text {
-    font-family: 'Google Sans Code', monospace;
-    font-weight: 400;
-    font-size: 2rem;
-    color: #ececec;
-    text-align: center;
-    margin: 1rem 10%;
 }
 
 .footer-note {
@@ -50,89 +16,95 @@ body {
     margin-bottom: 1rem;
 }
 
-.wip-link-icons {
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+.header {
     display: flex;
-    justify-content: center;
+}
+
+.header,
+.projects {
     gap: 2rem;
-    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
-.wip-link-tile:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s;
-}
-
-.wip-link-tile {
-    transition: transform 0.2s;
-}
-
-.wip-link-tile img {
-    width: 64px;
-    height: 64px;
-}
-
-.wip-link-tile a {
-    text-decoration: none;
-    color: #ececec;
-    font-family: 'Google Sans Code', monospace;
-}
-
-.wip-subtitle {
+.title {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
-    font-size: 1.5rem;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--global-title-color);
 }
 
-.cursor {
-    margin-left: 1rem;
-}
-
-.cursor::after {
-    content: "▂";
-    font-weight: bold;
-    animation: blink 1s steps(1) infinite;
+.subtitle,
+.project-title {
+    font-family: 'Google Sans Code', monospace;
+    font-weight: 400;
+    font-size: 1.4rem;
     color: var(--vscode-pink);
 }
 
-.vscode-pink {
-    color: var(--vscode-pink);
-    font-weight: bold;
-    font-family: "Google Sans Code", monospace;
+.text-content,
+.project-description {
+    font-family: 'Google Sans Code', monospace;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--global-text-color);
+    text-align: justify;
 }
 
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
+.header-content,
+.projects {
+    border: #4a5563 1px solid;
+    background-color: var(--global-window-bg);
+    padding: 1rem;
+    border-radius: var(--global-border-radius);
 }
+
+.profile-picture {
+    width: 30%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: var(--global-border-color) 1px solid;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: var(--global-border-radius);
+    border: 1px solid var(--global-border-color);
+    object-fit: cover;
+}
+
+.links {
+    max-width: 30%;
+    border: #4a5563 1px solid;
+    border-radius: var(--global-border-radius);
+    background-color: var(--global-window-bg);
+}
+
+/* Define custom color variables */
 
 :root {
     --vscode-pink: #BE7ADC;
+    --global-border-radius: 15px;
+    --global-window-bg: #2a2e38;
+    --global-title-color: #dddddd;
+    --global-subtitle-color: #aaaaaa;
+    --global-text-color: #cccccc;
+    --global-border-color: #4a5563;
 }
 
-@media (max-width: 600px) {
-    .wip-title {
-        font-size: 2.2rem;
-    }
+/* Responsive design for mobile devices */
 
-    .wip-text {
-        font-size: 1.2rem;
-        margin: 1rem 3%;
-    }
-
-    .wip-subtitle {
-        font-size: 1rem;
-    }
-
-    .wip-link-icons {
-        gap: 1rem;
-    }
-
-    .wip-link-tile img {
-        width: 40px;
-        height: 40px;
-    }
-}
+@media (max-width: 600px) {}
