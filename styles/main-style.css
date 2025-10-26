@@ -186,12 +186,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.footer-note::before {
-    content: "⚡ ";
-    color: var(--vscode-yellow);
-    margin-right: 0.5rem;
-}
-
 /* Footer as status bar */
 footer {
     padding: 1rem 0;
@@ -259,7 +253,7 @@ footer {
 
 .profile-picture:hover {
     box-shadow: 0 0 30px rgba(190, 122, 220, 0.4);
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .profile-picture-container {
@@ -334,14 +328,6 @@ footer {
     text-decoration: none;
     position: relative;
     padding-left: 0.3rem;
-}
-
-.social-text::before {
-    content: "├─";
-    position: absolute;
-    left: -1.5rem;
-    color: #666;
-    font-size: 0.9rem;
 }
 
 .social-text:hover {
