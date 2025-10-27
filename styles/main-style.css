@@ -58,7 +58,8 @@ body {
 .projects,
 .links,
 .contact,
-.fab-products, .skills {
+.fab-products,
+.skills {
     position: relative;
     border: 1px solid var(--global-border-color);
     background-color: var(--global-window-bg);
@@ -102,12 +103,12 @@ body {
     right: 12px;
     width: calc(var(--window-control-size) * 3 + 16px);
     height: var(--window-control-size);
-    background-image: 
+    background-image:
         radial-gradient(circle, var(--window-control-red) 0%, var(--window-control-red) 50%, transparent 50%),
         radial-gradient(circle, var(--window-control-yellow) 0%, var(--window-control-yellow) 50%, transparent 50%),
         radial-gradient(circle, var(--window-control-green) 0%, var(--window-control-green) 50%, transparent 50%);
     background-size: var(--window-control-size) var(--window-control-size);
-    background-position: 
+    background-position:
         0 0,
         calc(var(--window-control-size) + 8px) 0,
         calc(var(--window-control-size) * 2 + 16px) 0;
@@ -235,7 +236,8 @@ footer {
     font-family: 'Google Sans Code', monospace;
 }
 
-.small-window-section .links, .skills {
+.small-window-section .links,
+.skills {
     width: 100%;
 }
 
@@ -297,12 +299,14 @@ footer {
     filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.15));
 }
 
-.links, .skills {
+.links,
+.skills {
     box-sizing: border-box;
     height: fit-content;
 }
 
-.social-link, .skill-link {
+.social-link,
+.skill-link {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -322,7 +326,8 @@ footer {
     margin-right: 8px;
 }
 
-.social-text, .skill-link p {
+.social-text,
+.skill-link p {
     font-family: 'Google Sans Code', monospace;
     font-weight: 400;
     font-size: 1.1rem;
@@ -494,6 +499,21 @@ footer {
 /* =======================
    Responsive Design
 ======================= */
+
+@media (min-width: 881px) {
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
+    }
+
+    .skill-link {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 0 .5rem 0 .5rem;
+    }
+}
+
 @media (max-width: 880px) {
 
     /* later... */

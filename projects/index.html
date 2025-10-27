@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kordight's projects | Game & Software Developer</title>
+    <meta name="description"
+        content="Kordight — indie developer creating games, 3D assets, and tools using Unreal Engine, Blender, and C++.">
+    <meta name="keywords" content="Kordight, game developer, Unreal Engine, Blender, C++, 3D assets, tools, portfolio">
+    <meta property="og:title" content="Kordight | Game Development & 3D Tools">
+    <meta property="og:description" content="Indie dev crafting interactive worlds and tools for creators.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Google+Sans+Code:wght@400;700&family=Orbitron&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/main-style.css">
+</head>
+
+<body>
+    <div class="content">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">My Projects</h1>
+                <p class="subtitle">Games Art and software</p>
+                <p class="text-content"> Explore my diverse collection of projects spanning game development, developer
+                    tools, and creative
+                    software solutions. Each project represents my passion for crafting innovative experiences and
+                    practical
+                    utilities.</p>
+
+                </p>
+            </div>
+        </header>
+
+        <!-- SECTION: LINKS + PROJECTS -->
+        <section class="section-1">
+            <!-- LINKS -->
+
+            <div class="big-window-section"> <!-- PROJECTS -->
+                <div class="projects">
+                    <div class="section-header">
+                        <h2 class="title">Featured Projects</h2>
+                        <a href="../index.html" class="section-link">Return 0;</a>
+                    </div>
+
+                    <div class="project-list">
+                        <!-- YT-PAO-->
+                        <div class="project-item">
+                            <a href="https://github.com/Kordight/yt-pao">
+                                <h3 class="project-title">YT-PAO - YouTube Playlist Analyzer & Organizer</h3>
+                            </a>
+                            <img src="../img/projects/yt-pao-logo.jpg" alt="Cold Line Game Thumbnail"
+                                class="project-thumbnail">
+                            <p class="project-description">
+                                YT-PAO is a Python tool for analyzing YouTube playlists, tracking unavailable videos,
+                                and exporting
+                                metadata in multiple formats including HTML, CSV, JSON, TXT, and MySQL.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag-python">Python</span>
+                                <span class="project-tag-data-analysis">Data Analysis</span>
+                            </div>
+                        </div>
+                        <!-- SNF-UE -->
+                        <div class="project-item">
+                            <a href="https://github.com/Kordight/Simple-Network-Functions-For-Unreal-Engine">
+                                <h3 class="project-title">Simple Network Function for UE</h3>
+                            </a>
+                            <img src="../img/projects/ue-network-logo.jpg" alt="Cold Line Game Thumbnail"
+                                class="project-thumbnail">
+                            <p class="project-description">
+                                Simple Network Functions for Unreal Engine is a Windows-only UE4.27 plugin that adds LAN
+                                IP and
+                                connection
+                                status functions to Blueprints for streamlined local networking.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag-cpp">C++</span>
+                                <span class="project-tag-ue">Unreal Engine</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p class="footer-note">© <span id="year"></span> Kordight. All rights reserved. Logos are trademarks of
+                their
+                respective owners.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
