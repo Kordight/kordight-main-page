@@ -1,0 +1,18 @@
+# robots.txt for https://kordight.dev
+# Allow all search engines by default, but block common development or private folders
+
+User-agent: *
+Disallow: /node_modules/
+Disallow: /private/
+Disallow: /scripts/local-test/
+Disallow: /tmp/
+
+# Allow static assets so crawlers can index images/css/js used on pages
+Allow: /img/
+Allow: /styles/
+
+# Link to sitemap
+Sitemap: https://kordight.dev/sitemap.xml
+
+# Optional polite crawl delay (some crawlers ignore this)
+Crawl-delay: 10

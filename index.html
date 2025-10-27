@@ -4,19 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kordight | Game & Software Development + 3D Tools</title>
+  <title>Kordight | Game & Software Developer</title>
   <meta name="description"
     content="Kordight — indie developer creating games, 3D assets, and tools using Unreal Engine, Blender, and C++.">
   <meta name="keywords" content="Kordight, game developer, Unreal Engine, Blender, C++, 3D assets, tools, portfolio">
+  <meta name="author" content="Sebastian 'Kordight'">
+  <link rel="canonical" href="https://kordight.dev/">
   <meta property="og:title" content="Kordight | Game Development & 3D Tools">
   <meta property="og:description" content="Indie dev crafting interactive worlds and tools for creators.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kordight.dev/">
+  <meta property="og:image" content="https://kordight.dev/img/profile-picture.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Google+Sans+Code:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Google+Sans+Code:wght@400;700&family=Orbitron&display=swap"
     rel="stylesheet">
 
   <!-- Styles -->
@@ -24,40 +28,184 @@
 </head>
 
 <body>
-  <main class="wip-center-box">
-    <header>
-      <h1 class="wip-title">Work In Progress<span class="cursor"></span></h1>
-      <p class="wip-text">
-        This site is currently under <span class="vscode-pink">&lt;development&gt;</span>.
-        Check back soon for updates and new projects.
-      </p>
+  <div class="content">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="profile-picture-container">
+        <img src="img/profile-picture.jpg" alt="Kordight Profile Picture" class="profile-picture">
+        <div class="mobile-speech-bubble">Hello There 👋</div>
+      </div>
+      <div class="header-content">
+        <h1 class="title">Sebastian 'Kordight'</h1>
+        <p class="subtitle">Game & Software Developer</p>
+        <p class="text-content">
+          I am an independent creator specializing in games and tools. I use Unreal Engine, Blender, and C++ to
+          realise my hobby and learn how to be better at creating efficient plugins, and 3D assets. I also develop
+          practical tools for
+          data analysis and workflow automation. My projects are available on GitHub, ArtStation, and Fab. If you have
+          questions or would like to collaborate, feel free to get in touch.
+        </p>
+      </div>
     </header>
 
-    <section class="promo-links">
-      <h2 class="wip-subtitle">Follow me on socials</h2>
-      <div class="wip-link-icons">
-        <div class="wip-link-tile">
-          <a href="https://github.com/Kordight" target="_blank" rel="noopener noreferrer">
-            <img src="img/logos/github-mark-white.svg" alt="GitHub logo" class="wip-icon">
-            <p>GitHub</p>
-          </a>
-        </div>
-        <div class="wip-link-tile">
-          <a href="https://www.fab.com/sellers/Kordight" target="_blank" rel="noopener noreferrer">
+    <!-- SECTION: LINKS + PROJECTS -->
+    <section class="section-1">
+      <!-- LINKS -->
+      <div class="small-window-section">
+        <div class="links">
+          <h3 class="title-minor" data-line="1">Find Me Online</h3>
+
+          <div class="social-link">
+            <img src="img/logos/github-mark-white.svg" alt="GitHub Logo" class="social-logo">
+            <a href="https://github.com/Kordight" class="social-text">GitHub</a>
+          </div>
+
+          <div class="social-link">
+            <img src="img/logos/ArtStation-logomark-white.svg" alt="ArtStation Logo" class="social-logo">
+            <a href="https://www.artstation.com/sebastian812" class="social-text">ArtStation</a>
+          </div>
+
+          <div class="social-link">
             <img
               src="https://static.fab.com/static/builds/web/dist/frontend/assets/images/common/logo/e1e12dc6142410b391ce48e416261ad7-v1.svg"
-              alt="Fab seller profile logo" class="wip-icon">
-            <p>Fab</p>
-          </a>
+              alt="Epic Games Fab Logo" class="social-logo">
+            <a href="https://www.fab.com/sellers/Kordight" class="social-text">Fab</a>
+          </div>
+        </div>
+        <div class="skills">
+          <h3 class="title-minor" data-line="2">Tools that I mostly use</h3>
+          <div class="skills-container">
+            <!-- Game Development -->
+            <div class="skill-link">
+              <img src="img/logos/blender-logo.svg" alt="Blender Logo" class="social-logo">
+              <p>Blender</p>
+            </div>
+            <div class="skill-link">
+              <img src="img/logos/ue-logo.svg" alt="Unreal Engine Logo" class="social-logo">
+              <p>Unreal Engine</p>
+            </div>
+            <div class="skill-link">
+              <img src="img/logos/substance-logo.svg" alt="Substance Logo" class="social-logo">
+              <p>Substance Suite</p>
+            </div>
+
+            <!-- Programming -->
+            <div class="skill-link">
+              <img src="img/logos/python-logo.svg" alt="Python Logo" class="social-logo">
+              <p>Python</p>
+            </div>
+            <!-- Data & Systems -->
+            <div class="skill-link">
+              <img src="img/logos/my-sql-logo.svg" alt="MySQL Logo" class="social-logo">
+              <p>MySQL</p>
+            </div>
+            <div class="skill-link">
+              <img src="img/logos/ubuntu-logo.svg" alt="Ubuntu Logo" class="social-logo">
+              <p>Ubuntu Server</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact">
+          <h3 class="title-minor" data-line="3">Contact Me</h3>
+          <p class="text-content-contact">
+            For inquiries, Fab products related support, or just to say hello, feel free to reach out ^^
+          </p>
+          <div class="contact-method">
+            <img src="img/logos/email-logo.svg" alt="Email Icon" class="social-logo">
+            <a href="mailto:sebastian@kordight.dev" class="social-text">sebastian@kordight.dev</a>
+          </div>
         </div>
       </div>
+      <div class="big-window-section"> <!-- PROJECTS -->
+        <div class="projects">
+          <div class="section-header">
+            <h2 class="title">Featured Projects</h2>
+            <a href="/projects/index.html" class="section-link">SeeMore()</a>
+          </div>
+
+          <div class="project-list">
+            <!-- YT-PAO-->
+            <div class="project-item">
+              <a href="https://github.com/Kordight/yt-pao">
+                <h3 class="project-title">YT-PAO - YouTube Playlist Analyzer & Organizer</h3>
+              </a>
+              <img src="img/projects/yt-pao-logo.jpg" alt="YT-PAO YouTube Playlist Analyzer Project Thumbnail" class="project-thumbnail">
+              <p class="project-description">
+                YT-PAO is a Python tool for analyzing YouTube playlists, tracking unavailable videos, and exporting
+                metadata in multiple formats including HTML, CSV, JSON, TXT, and MySQL.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag-python">Python</span>
+                <span class="project-tag-data-analysis">Data Analysis</span>
+              </div>
+            </div>
+            <!-- SNF-UE -->
+            <div class="project-item">
+              <a href="https://github.com/Kordight/Simple-Network-Functions-For-Unreal-Engine">
+                <h3 class="project-title">Simple Network Function for UE</h3>
+              </a>
+              <img src="img/projects/ue-network-logo.jpg" alt="Simple Network Functions for Unreal Engine Plugin Thumbnail" class="project-thumbnail">
+              <p class="project-description">
+                Simple Network Functions for Unreal Engine is a Windows-only UE4.27 plugin that adds LAN IP and
+                connection
+                status functions to Blueprints for streamlined local networking.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag-cpp">C++</span>
+                <span class="project-tag-ue">Unreal Engine</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fab-products">
+          <div class="section-header">
+            <h2 class="title">Featured Fab Products</h2>
+            <a href="https://www.fab.com/sellers/Kordight" class="section-link">SeeMore()</a>
+          </div>
+          <div class="project-list">
+            <!-- HexNav-->
+            <div class="project-item">
+              <a href="https://www.fab.com/listings/e3b16536-a0b9-4b58-b1cf-7de3b3e9e12d">
+                <h3 class="project-title">HexNav - Simple Hexagonal Grid Navigation Plugin</h3>
+              </a>
+              <img src="img/projects/hexNav-logo.jpg" alt="HexNav Hexagonal Grid Navigation Plugin Thumbnail" class="project-thumbnail">
+              <p class="project-description">
+                Lightweight C++ plugin for hex tile pathfinding in Unreal Engine, with plans for
+                multi-platform and grid-type support—open to feedback and future expansion.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag-cpp">C++</span>
+                <span class="project-tag-plugin">Plugin</span>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <a href="https://www.fab.com/listings/6632e00a-c75b-4c40-9182-d17d4e671d64">
+                <h3 class="project-title">Tiny Environments: Art Gallery</h3>
+              </a>
+              <img src="img/projects/museum-logo.jpg" alt="Tiny Environments Art Gallery Pack Thumbnail" class="project-thumbnail">
+              <p class="project-description">
+                A small modern art gallery pack with modular assets, optimized for real-time rendering in Unreal Engine
+                ideal
+                for sleek, interactive environments and architectural visualization
+              </p>
+              <div class="project-tags">
+                <span class="project-tag-environment">Environment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
+    <!-- FOOTER -->
     <footer>
       <p class="footer-note">© <span id="year"></span> Kordight. All rights reserved. Logos are trademarks of their
         respective owners.</p>
     </footer>
-  </main>
+  </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
