@@ -193,7 +193,9 @@ body {
 footer {
     padding: 1rem 0;
 }
-
+.highlighted-zero{
+    color: var(--vscode-pink);
+}
 /* =======================
    Profile & Links
 ======================= */
@@ -374,7 +376,7 @@ footer {
     text-decoration: none;
     padding-top: 1rem;
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: 1.55rem;
 }
 
 .section-link::before {
