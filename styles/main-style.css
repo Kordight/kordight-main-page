@@ -58,7 +58,7 @@ body {
 .projects,
 .links,
 .contact,
-.fab-products {
+.fab-products, .skills {
     position: relative;
     border: 1px solid var(--global-border-color);
     background-color: var(--global-window-bg);
@@ -72,7 +72,8 @@ body {
 .projects::before,
 .links::before,
 .contact::before,
-.fab-products::before {
+.fab-products::before,
+.skills::before {
     content: "";
     position: absolute;
     top: 0;
@@ -93,7 +94,8 @@ body {
 .projects::after,
 .links::after,
 .contact::after,
-.fab-products::after {
+.fab-products::after,
+.skills::after {
     content: "";
     position: absolute;
     top: 12px;
@@ -233,7 +235,7 @@ footer {
     font-family: 'Google Sans Code', monospace;
 }
 
-.small-window-section .links {
+.small-window-section .links, .skills {
     width: 100%;
 }
 
@@ -295,12 +297,12 @@ footer {
     filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.15));
 }
 
-.links {
+.links, .skills {
     box-sizing: border-box;
     height: fit-content;
 }
 
-.social-link {
+.social-link, .skill-link {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -320,7 +322,7 @@ footer {
     margin-right: 8px;
 }
 
-.social-text {
+.social-text, .skill-link p {
     font-family: 'Google Sans Code', monospace;
     font-weight: 400;
     font-size: 1.1rem;
