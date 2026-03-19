@@ -189,6 +189,9 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.footer-note-small{
+      font-size: 0.5rem;
+}
 /* Footer as status bar */
 footer {
     padding: 1rem 0;
