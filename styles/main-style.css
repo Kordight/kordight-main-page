@@ -176,9 +176,16 @@ body {
 }
 
 .footer-note {
+        font-size: 1rem;
+}
+
+.footer-note-small{
+      font-size: 0.5rem;
+}
+/* Footer as status bar */
+footer {
     font-family: 'Google Sans Code', monospace;
     font-weight: 400;
-    font-size: 1rem;
     color: #aaaaaa;
     text-align: center;
     margin-bottom: 1rem;
@@ -187,14 +194,6 @@ body {
     border-radius: 8px;
     padding: 0.8rem 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.footer-note-small{
-      font-size: 0.5rem;
-}
-/* Footer as status bar */
-footer {
-    padding: 1rem 0;
 }
 
 .highlighted-zero {
