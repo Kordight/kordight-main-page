@@ -344,6 +344,7 @@ footer {
     text-decoration: none;
     position: relative;
     padding-left: 0.3rem;
+    margin: 0;
 }
 
 .social-text:hover {
