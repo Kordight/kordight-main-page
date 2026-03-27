@@ -24,8 +24,8 @@
     --window-control-red: #ff5f56;
     --window-control-yellow: #ffbd2e;
     --window-control-green: #27c93f;
-   --global-backend-color: #E67E22;
-    --global-docker-color: #2496ED; 
+    --global-backend-color: #E67E22;
+    --global-docker-color: #2496ED;
 }
 
 /* =======================
@@ -178,12 +178,13 @@ body {
 }
 
 .footer-note {
-        font-size: 1rem;
+    font-size: 1rem;
 }
 
-.footer-note-small{
-      font-size: 0.75rem;
+.footer-note-small {
+    font-size: 0.75rem;
 }
+
 /* Footer as status bar */
 footer {
     font-family: 'Google Sans Code', monospace;
