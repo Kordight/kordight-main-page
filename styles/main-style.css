@@ -24,6 +24,8 @@
     --window-control-red: #ff5f56;
     --window-control-yellow: #ffbd2e;
     --window-control-green: #27c93f;
+   --global-backend-color: #E67E22;
+    --global-docker-color: #2496ED; 
 }
 
 /* =======================
