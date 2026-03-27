@@ -24,6 +24,8 @@
     --window-control-red: #ff5f56;
     --window-control-yellow: #ffbd2e;
     --window-control-green: #27c93f;
+    --global-backend-color: #E67E22;
+    --global-docker-color: #2496ED;
 }
 
 /* =======================
@@ -176,12 +178,13 @@ body {
 }
 
 .footer-note {
-        font-size: 1rem;
+    font-size: 1rem;
 }
 
-.footer-note-small{
-      font-size: 0.75rem;
+.footer-note-small {
+    font-size: 0.75rem;
 }
+
 /* Footer as status bar */
 footer {
     font-family: 'Google Sans Code', monospace;
@@ -453,7 +456,9 @@ footer {
 .project-tag-cpp,
 .project-tag-ue,
 .project-tag-plugin,
-.project-tag-environment {
+.project-tag-environment,
+.project-tag-backend,
+.project-tag-docker {
     display: inline-block;
     color: #ffffff;
     padding: 4px 8px;
@@ -472,7 +477,9 @@ footer {
 .project-tag-cpp:hover,
 .project-tag-ue:hover,
 .project-tag-plugin:hover,
-.project-tag-environment:hover {
+.project-tag-environment:hover,
+.project-tag-backend:hover,
+.project-tag-docker:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -501,6 +508,13 @@ footer {
     background-color: var(--global-environment-color);
 }
 
+.project-tag-backend {
+    background-color: var(--global-backend-color);
+}
+
+.project-tag-docker {
+    background-color: var(--global-docker-color);
+}
 
 /* =======================
    Responsive Design
